@@ -11,7 +11,7 @@ AnySystem Design is a React component library with 22 components covering forms,
 ### Option 1: NPM Package (Recommended)
 
 ```bash
-npm install @anysystem/design-agent-skill
+npm install @anysystem-design-skill
 ```
 
 Then configure in your AI assistant:
@@ -20,27 +20,40 @@ Then configure in your AI assistant:
 {
   "skills": {
     "anysystem-design": {
-      "path": "node_modules/@anysystem/design-agent-skill"
+      "path": "node_modules/@anysystem-design-skill"
     }
   }
 }
 ```
 
-### Option 2: Direct Download
+### Option 2: Git Submodule
 
-Download the skill files from the repository:
+Add as a submodule to your project:
 
 ```bash
-git clone https://github.com/your-org/anysystem-design.git
-cd anysystem-design/agent-skill
+git submodule add git@github.com:freedomw1987/anysystem-design-skill.git agent-skill
 ```
 
-### Option 3: Claude Code Skills
+Update the submodule to latest version:
+
+```bash
+git submodule update --remote agent-skill
+```
+
+### Option 3: Direct Clone
+
+Clone this repository directly:
+
+```bash
+git clone git@github.com:freedomw1987/anysystem-design-skill.git
+```
+
+### Option 4: Claude Code Skills
 
 For Claude Code CLI, copy to your project's `.claude/skills/` directory:
 
 ```bash
-cp -r agent-skill/* .claude/skills/
+cp -r anysystem-design-skill/* .claude/skills/
 ```
 
 ## Contents
@@ -194,33 +207,59 @@ agent-skill/
 
 To update or improve this skill:
 
-1. Fork the repository
-2. Update documentation in `docs/`
-3. Regenerate skill: `npm run build-skill`
-4. Test with your AI assistant
-5. Submit pull request
+1. Fork this repository: https://github.com/freedomw1987/anysystem-design-skill
+2. Make your changes to the skill files
+3. Test with your AI assistant
+4. Submit a pull request
+
+### Updating in a Parent Project
+
+If you're using this as a submodule:
+
+```bash
+cd agent-skill
+git checkout main
+git pull origin main
+# Make your changes
+git add .
+git commit -m "Your changes"
+git push origin main
+
+# Update parent project to use new version
+cd ..
+git add agent-skill
+git commit -m "Update agent-skill submodule"
+```
 
 ## Version
 
-Current version: 0.0.48 (matches library version)
+Current version: 0.0.1
+
+This skill is maintained separately from the main AnySystem Design library to allow independent updates and versioning.
+
+## Repository
+
+This is a standalone repository that can be used as:
+- A git submodule in your main project
+- An NPM package (when published)
+- A direct clone for local development
 
 ## License
 
-Same as AnySystem Design library (check main package.json)
+Same as AnySystem Design library
 
 ## Links
 
+- [Main Component Library](https://github.com/freedomw1987/anysystem-design)
 - [Component Library NPM](https://www.npmjs.com/package/anysystem-design)
-- [Documentation](https://github.com/your-org/anysystem-design/tree/main/docs)
-- [Storybook](https://your-storybook-url.com)
-- [GitHub](https://github.com/your-org/anysystem-design)
+- [This Skill Repository](https://github.com/freedomw1987/anysystem-design-skill)
 
 ## Support
 
 For issues or questions:
-- GitHub Issues: [Link to issues]
-- Documentation: [Link to docs]
-- Examples: See `examples/` directory
+- GitHub Issues: https://github.com/freedomw1987/anysystem-design-skill/issues
+- Main Library Issues: https://github.com/freedomw1987/anysystem-design/issues
+- Examples: See `examples/` directory in this repository
 
 ---
 
