@@ -2,6 +2,8 @@
 id: SKILL
 aliases: []
 tags: []
+description: LLM Agent Skill for AnySystem Design React component library
+name: anysystem-design
 ---
 
 # AnySystem Design - LLM Agent Skill
