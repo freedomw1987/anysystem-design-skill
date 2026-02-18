@@ -1,3 +1,9 @@
+---
+id: SKILL
+aliases: []
+tags: []
+---
+
 # AnySystem Design - LLM Agent Skill
 
 A comprehensive LLM agent skill for the AnySystem Design React component library. This skill enables AI assistants to help developers use the component library effectively.
