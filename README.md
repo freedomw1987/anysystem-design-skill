@@ -8,10 +8,14 @@ AnySystem Design is a React component library with 22 components covering forms,
 
 ## Installation
 
-### Option 1: NPM Package (Recommended)
+### Option 1: NPX / BUNX Package (Recommended)
 
 ```bash
-npm install @anysystem-design-skill
+npx skills add freedomw1987/anysystem-design-skill
+
+# or 
+
+bunx skills add freedomw1987/anysystem-design-skill
 ```
 
 Then configure in your AI assistant:
